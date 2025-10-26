@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARE IEEE Student Branch - Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logo-container {
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 98, 155, 0.3);
+            border-radius: 50%;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .branch-code {
+            color: #718096;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #4a5568;
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .slots-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .slot-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .slot-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .slot-card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .slot-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .slot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .slot-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .slot-time {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .slot-info {
+            color: #4a5568;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #00629B, #0A7EBE);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 98, 155, 0.3);
+        }
+
+        .register-btn:hover {
+            background: linear-gradient(135deg, #0A7EBE, #00629B);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 98, 155, 0.5);
+        }
+
+        .register-btn:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .header-card {
+                padding: 30px 20px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .slots-container {
+                grid-template-columns: 1fr;
+            }
+
+            .slot-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-card">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="IEEE new logo (1).png" alt="KARE IEEE Student Branch Logo">
+                </div>
+            </div>
+            <h1>KARE IEEE STUDENT BRANCH</h1>
+            <p class="branch-code">SB34451</p>
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+                <h2 style="font-size: 2em; margin-bottom: 10px;">🏆 IEEE CODE BLAST</h2>
+                <p style="font-size: 1.1em; font-weight: 600;">Preliminary Round</p>
+            </div>
+            <p class="description">
+                Join us in advancing technology for humanity. Showcase your coding knowledge!
+            </p>
+        </div>
+
+        <div class="slots-container">
+            <div class="slot-card">
+                <div class="slot-header">
+                    <div class="slot-title">Slot 1</div>
+                    <div class="slot-time">📅 October 27, 2025 | ⏰ 5:00 PM - 6:00 PM</div>
+                </div>
+                <div class="slot-info">
+                    <p>📚 <strong>Test for Slot 1</strong></p>
+                    <p>50 multiple-choice questions testing your coding fundamentals, algorithms, and problem-solving skills.</p>
+                </div>
+                <button class="register-btn" onclick="window.open('https://forms.google.com/your-slot1-form-link', '_blank')">
+                    Click to Start the Test
+                </button>
+            </div>
+
+            <div class="slot-card">
+                <div class="slot-header">
+                    <div class="slot-title">Slot 2</div>
+                    <div class="slot-time">📅 October 28, 2025 | ⏰ 5:00 PM - 6:00 PM</div>
+                </div>
+                <div class="slot-info">
+                    <p>📚 <strong>Test for Slot 2</strong></p>
+                    <p>50 multiple-choice questions covering programming concepts, data structures, and logical reasoning.</p>
+                </div>
+                <button class="register-btn" onclick="window.open('https://forms.google.com/your-slot2-form-link', '_blank')">
+                    Click to Start the Test
+                </button>
+            </div>
+
+            <div class="slot-card">
+                <div class="slot-header">
+                    <div class="slot-title">Slot 3</div>
+                    <div class="slot-time">📅 October 29, 2025 | ⏰ 5:00 PM - 6:00 PM</div>
+                </div>
+                <div class="slot-info">
+                    <p>📚 <strong>Test for Slot 3</strong></p>
+                    <p>50 multiple-choice questions designed to evaluate your technical knowledge and coding expertise.</p>
+                </div>
+                <button class="register-btn" onclick="window.open('https://forms.google.com/your-slot3-form-link', '_blank')">
+                    Click to Start the Test
+                </button>
+            </div>
+        </div>
+
+        <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); margin-top: 30px; animation: fadeInUp 1s ease;">
+            <h2 style="color: #2d3748; font-size: 1.8em; margin-bottom: 20px; text-align: center;">📋 Test Instructions</h2>
+            <div style="color: #4a5568; line-height: 1.8; font-size: 1.05em;">
+                <div style="background: #f7fafc; padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #667eea;">
+                    <p><strong>📊 Test Format:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Total Questions: <strong>50</strong></li>
+                        <li>Each Question: <strong>1 Mark</strong></li>
+                        <li>Total Marks: <strong>50</strong></li>
+                        <li>Duration: <strong>1 Hour (60 minutes)</strong></li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f7fafc; padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #00629B;">
+                    <p><strong>⚠️ Important Guidelines:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>All questions are <strong>multiple-choice</strong> with only one correct answer</li>
+                        <li>Read each question carefully before answering</li>
+                        <li>You can attempt the questions in any order</li>
+                        <li>Make sure to submit before the time ends</li>
+                        <li>Once submitted, you <strong>cannot</strong> modify your answers</li>
+                    </ul>
+                </div>
+                
+                
+                
+                <div style="text-align: center; margin-top: 25px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px; font-weight: 600;">
+                    🎯 Best of luck! Show us your coding prowess!
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 KARE IEEE Student Branch (SB34451). All rights reserved.</p>
+            <p>Designed with ❤️ for IEEE Members | <a href="https://www.ieee.org" target="_blank">Visit IEEE.org</a></p>
+        </div>
+    </div>
+</body>
+</html>
